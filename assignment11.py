@@ -1,6 +1,6 @@
 #Question 1
 
-import threading
+'''import threading
 from threading import Thread
 import time
 class mythread(threading.Thread):
@@ -57,15 +57,22 @@ thread1=a(b)
 thread1.start()
 
 #End
-
+000
 #Question 3
 '''
-
+import time
 import threading
-class th(threading.Thread)
-    def __init__(self,sleep):
+class th(threading.Thread):
+    def __init__(self):
         threading.Thread.__init__(self)
+
+
     def run(self):
         l=[1,2,3,4,5]
+        a=[2,4,6,8,10]
         for i in l:
-'''
+            print("number is ", l[i])
+            time.sleep(int(a[i]))
+
+t=th()
+t.start()
