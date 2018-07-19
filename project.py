@@ -15,7 +15,7 @@ def new_file(event=None):
     filename="Untitled"
     text.delete(0.0,END)
 
-def savefile(event=None):
+def savefile(event=None):                               # file handling
     global filename
     t=text.get(0.0,END)
     f=open(filename,mode='w')
@@ -120,7 +120,7 @@ master.iconbitmap('icons/favicon.ico')
 scrollbar=Scrollbar(master)
 master.title("TEXT EDITOR")
 icon_frame=Frame(master,bg="black")
-icon_frame.pack(expand=NO,fill=X)
+icon_frame.pack(expand=NO,fill=X)                                       # user interface
 text=Text(master,yscrollcommand=scrollbar.set)
 text.pack(expand=YES,fill=BOTH)
 scrollbar.pack(side=RIGHT,fill=Y)
@@ -168,7 +168,7 @@ status.pack(side=BOTTOM,fill=X)
 #======================================================================================================================
 text.bind("<Control-N>",new_file)
 text.bind("<Control-O>",openfile)
-text.bind("<Control-S>",savefile)
+text.bind("<Control-S>",savefile)                             # SHORTCUT KEYS
 text.bind("<Control-F>",findin)
 text.bind("<Control-X>",cut)
 text.bind("<Control-C>",copy)
@@ -180,7 +180,7 @@ new_file_icon = PhotoImage(file='icons/new_file.gif')
 savefile_icon = PhotoImage(file='icons/savefile.gif')
 cut_icon = PhotoImage(file='icons/cut.gif')
 copy_icon = PhotoImage(file='icons/copy.gif')
-paste_icon = PhotoImage(file='icons/paste.gif')
+paste_icon = PhotoImage(file='icons/paste.gif')                # ICONS
 undo_icon = PhotoImage(file='icons/undo.gif')
 redo_icon = PhotoImage(file='icons/redo.gif')
 
